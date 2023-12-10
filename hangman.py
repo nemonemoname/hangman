@@ -2,7 +2,7 @@ import random
 from visual import hangman_visual
 
 def choose_word():
-    file_path = "path/to/words.txt"
+    file_path = "/Users/eunk630/파이썬/Hangman/words.txt"
     with open(file_path, "r") as file:
         words = file.read().splitlines()
     return random.choice(words)
@@ -41,7 +41,7 @@ def hangman():
 
         if guess not in word_to_guess:
             attempts -= 1
-            print("Incorrect guess!")
+            print("Incorrect guess")
 
         if "_" not in display_word(word_to_guess, guessed_letters):
             print("\nCongratulations! You guessed the word:", word_to_guess)
@@ -49,7 +49,7 @@ def hangman():
 
         if attempts == 0:
             print(hangman_visual[attempts])
-            print("\nSorry, you ran out of attempts. The word was:", word_to_guess)
+            print("\nYou ran out of attempts. The word was:", word_to_guess)
             break
 
 if __name__ == "__main__":
