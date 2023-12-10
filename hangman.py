@@ -2,7 +2,7 @@ import random
 from visual import hangman_visual
 
 def choose_word():
-    file_path = "/Users/eunk630/파이썬/Hangman/words.txt"
+    file_path = "path/to/words.txt"
     with open(file_path, "r") as file:
         words = file.read().splitlines()
     return random.choice(words)
